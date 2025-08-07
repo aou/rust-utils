@@ -54,7 +54,7 @@ fn main() -> Result<(), BconnectError> {
     let disconnect = matches.get_flag("disconnect");
     if disconnect {
         for device in devices_connected.iter() {
-            _ = disconnect_device(&device)?;
+            _ = disconnect_device(device)?;
         }
     }
 
@@ -63,10 +63,10 @@ fn main() -> Result<(), BconnectError> {
             .get(device)
             .ok_or(BconnectError::BadDeviceString(device.to_string()))?;
         if devices_connected.contains(device) {
-            _ = disconnect_device(&device)?;
+            _ = disconnect_device(device)?;
         }
 
-        _ = connect_device(&device)?;
+        _ = connect_device(device)?;
     }
 
     Ok(())
