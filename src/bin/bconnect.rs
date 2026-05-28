@@ -26,6 +26,7 @@ fn main() -> Result<(), BconnectError> {
             ("tw4", "80:C3:BA:55:83:B1"),
             ("xm4", "14:3F:A6:E7:9B:4F"),
             ("xm5", "AC:80:0A:27:99:3E"),
+            ("xm6", "58:18:62:82:52:23"),
         ]
         .map(|(k, v)| (k.to_string(), v.to_string())),
     );
